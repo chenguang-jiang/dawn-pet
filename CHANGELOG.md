@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Separate character identity from pose, camera and scene composition; plan actions from content instead of defaulting documentation and query topics to a seated dog reading a book.
+- Specify independent image counts, separate generation calls and scene-diversity checks for multi-image requests.
+
 ### Changed
 - Renamed the skill, installation directory and GitHub repository to `dawn-pet`; updated repository description and installation URLs.
 - Replaced the black mascot with the DawnVibe homepage schnauzer, using the selected simplified paw-raising illustration as the sole identity and style anchor.

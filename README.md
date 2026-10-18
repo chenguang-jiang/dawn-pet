@@ -52,6 +52,8 @@ The box illustration is a scene example. The paw-raising image is the **sole ide
 | Process or state summary | Usually 3–5 actions linked by thin arrows, with short labels underneath |
 | Partial edit | Change the requested part while preserving the rest |
 
+The anchor fixes appearance and drawing style; actions, props, camera views and layouts follow each request. Multiple independent images are generated as separate files, with meaningful scene differences rather than changes to symbols inside the same book.
+
 The skill reads the anchor and identity rules, chooses an asset type from the request, builds an ImageGen prompt and checks the result. It uses built-in ImageGen; it does not install or train a model. Exact figures, fields, code and complex or concurrent flows belong in mermaid; the dog illustration can supply a short visual summary.
 
 ## Files and checks

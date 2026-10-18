@@ -8,8 +8,15 @@ Asset type: {avatar / pose sheet / 16:9 editorial scene / flow diagram}
 Input images:
 - Image 1 is the exact Dawn Pet identity AND style anchor. Preserve this same
   gray-and-cream miniature schnauzer in every pose. Other images only supply
-  pose, prop or composition references.
-Primary request: Show Dawn Pet {action}.
+  pose, prop or composition references ONLY when explicitly needed.
+- Image 1 fixes appearance and drawing style, not its sitting pose, raised paw,
+  gaze, camera angle or centered composition. Create the new scene below from
+  scratch. Do not copy a previous scene's book, prop or arrangement.
+Meaning to communicate: {specific relationship or event from the user content}.
+Primary request: Show Dawn Pet {concrete physical action serving that meaning}.
+Body pose: {canine posture and weight/contact with the prop}.
+Camera/view: {front / side / three-quarter / overhead, chosen for the action}.
+Spatial composition: {dog and prop placement, direction and relative scale}.
 Character invariants:
 - Compact puppy body, large recognizable schnauzer head, two folded triangular
   ears, short sturdy legs, rounded dog paws, short upturned tail.
@@ -29,12 +36,19 @@ No photorealistic fur, 3D, glossy vector rendering, gradient, busy background,
 text, border or watermark. Dog remains a dog even when using its front paws.
 ```
 
-## 动作示例
+## 场景推导与差异
 
-- 坐姿歪头：`Sitting naturally, gently tilting its head, all paws readable.`
-- 打招呼：`Sitting on its haunches and lifting one short front paw.`
-- 搬箱子：`Seated on its haunches, hugging one oversized box with both front paws; the box tilts slightly as if slipping. Keep paws canine, not hands.`
-- 推文件：`On all four paws, leaning forward to push a large folder with its nose.`
+先根据内容设计，以下只是推导示例，不是每次轮换的固定素材库：
+
+| 内容含义 | 动作与构图示例 |
+|---|---|
+| 将成果交到下一环节 | 四足侧身行走，嘴叼文件袋，向画面右侧移动 |
+| 发现隐藏的问题 | 三分之四俯视，前腿弯曲、鼻子靠近打开的盒子 |
+| 推动困难任务 | 侧视，四足撑地向前倾，用鼻子推过大的文件夹 |
+| 等待响应 | 趴在沙漏旁，下巴靠前爪，低视角、宽留白 |
+| 在候选方向间选择 | 背面三分之四视角，站在岔路前回头观察 |
+
+书只在具体内容需要阅读行为或用户点名时使用，不能作为所有知识类主题的通用道具。多张独立图分别填写主模板；保持同一角色，但在语义允许时至少改变动作、身体姿态、视角、空间关系中的两项。不要仅更换书中符号。
 
 ## 流程图解模板
 

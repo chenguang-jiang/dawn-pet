@@ -1,4 +1,4 @@
 interface:
   display_name: "dawn-pet"
   short_description: "为 DawnVibe 生成一致的灰白雪纳瑞 Dawn Pet 与白底手绘文档配图"
-  default_prompt: "Use $dawn-pet 生成一张保持灰白雪纳瑞身份一致、认真又略笨拙的白底手绘文档配图。"
+  default_prompt: "Use $dawn-pet 生成一张保持灰白雪纳瑞身份一致、认真又略笨拙的白底手绘配图；按本次内容设计动作与构图，不复用锚点姿势。"
