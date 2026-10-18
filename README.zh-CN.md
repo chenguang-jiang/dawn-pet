@@ -1,128 +1,66 @@
-<p align="center">
-  <img src="./assets/readme/hero.svg" width="100%" alt="jcg-documentation-pet：为 DawnVibe 文档生成保持一致性的蠢萌黑色吉祥物 Dawn Pet">
-</p>
+# dawn-pet
+
+为 DawnVibe 生成保持角色一致的手绘配图。Dawn Pet 现为一只**灰白雪纳瑞**，支持头像、动作设定、正文场景、流程意境图和局部编辑。
+
+[English](./README.md) · [MIT](./LICENSE)
 
 <p align="center">
-  <a href="./README.md">English</a>
-  ·
-  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT"></a>
-  <img src="https://img.shields.io/badge/Codex-Skill-purple.svg" alt="Codex Skill">
-  <img src="https://img.shields.io/badge/tests-23%20passing-brightgreen.svg" alt="23 tests passing">
-  <a href="https://github.com/chenguang-jiang/jcg-documentation-pet/actions/workflows/test.yml"><img src="https://github.com/chenguang-jiang/jcg-documentation-pet/actions/workflows/test.yml/badge.svg" alt="CI"></a>
+  <img src="./skills/dawn-pet/assets/identity/dawn-pet-anchor.png" width="360" alt="Dawn Pet 灰白雪纳瑞，折耳、奶白眉毛和胡子、棕眼、绿色项圈，坐着抬起一只前爪">
 </p>
 
-> **角色一致性 > 场景细节 > 装饰效果。**
-> 一张锚点图。四份参考文档。零漂移。
-
----
-
-## 亮点
-
-| | 特性 | 说明 |
-|---|---|---|
-| 🔒 | **身份锁定** | 头+身体=一整块连续梨形黑团。没有脖子、独立头部或蚂蚁式分节。由 `identity.md` 强制执行。 |
-| 👀 | **两只错位白眼** | 恰好两只小白圆眼，轻微高低/间距差。没有嘴、瞳孔、腮红。认真放空的凝视。 |
-| 🟠 | **唯一肚标** | 下腹正中一个极小的橙红色扁半圆。不是嘴。永远不移动到脸上。 |
-| 📐 | **视觉系统** | 纯黑角色+纯白背景。道具用稀疏、略抖的细黑线。无渐变、无 3D、无光泽。 |
-| 📝 | **提示词模板** | 即用的模板，内含角色不变量、风格约束和局部迭代句式。 |
-| ✅ | **QA 检查表** | 生成后检查：身份一致性、风格合规、失败信号、修正顺序。 |
-| 🖼️ | **锚点图** | `dawn-pet-anchor.png`——三个姿势（站立、搬箱、坐倒）定义唯一身份真相。 |
-| 🧪 | **23 项契约测试** | 验证 SKILL.md 结构、参考文件、锚点图、agent 配置和仓库资产。每次 push 自动 CI。 |
-
-## 这是什么
-
-`jcg-documentation-pet` 是一个 Codex Skill，为 DawnVibe 文档生成和编辑**保持一致性的蠢萌黑色吉祥物角色** Dawn Pet。它确保每张生成的图——头像、动作设定图、正文配图或局部编辑——都维持相同的角色身份。
-
-工作流程：
-
-1. **锁定身份**：从唯一锚点图（`dawn-pet-anchor.png`）读取。
-2. **应用不变量**：从 `identity.md` 获取轮廓、面部、四肢、肚标规则。
-3. **组合提示词**：从 `prompt-template.md` 生成带角色约束的 prompt。
-4. **检查输出**：对照 `qa-checklist.md` 验收后交付。
-
-## 工作原理
-
-```mermaid
-flowchart LR
-  U[用户请求] --> R[读取 identity.md + visual-system.md]
-  R --> P[从模板组合 prompt]
-  P --> G[带锚点图生成]
-  G --> Q{QA 检查表}
-  Q -->|通过| D[交付]
-  Q -->|失败| F[修正：轮廓→眼睛→四肢→道具]
-  F --> G
-```
-
-## 资产类型
-
-| 类型 | 画布 | 规则 |
-|---|---|---|
-| **头像/主视觉** | 方形或横向白底 | 单角色，完整轮廓 |
-| **动作设定图** | 横向白底 | 最多 3 个分离姿势，身份一致 |
-| **正文场景配图** | 16:9 白底 | 一个动作、一个道具、角色为焦点 |
-| **局部编辑** | 与原图相同 | 只改点名部分，其余不变 |
-| **流程图解** | 16:9 白底 | 3–5 节点；每节点同一个 Dawn Pet，细线箭头，节点下手写标签 |
-
-## 角色不变量
-
-- **身体**：矮、宽、略不对称的梨形纯黑实心团
-- **面部**：恰好两只略错位的小白圆眼；没有嘴
-- **四肢**：极短圆钝手臂、短粗腿、略大扁平脚
-- **肚标**：下腹正中一个极小橙红扁半圆
-- **风格**：纯黑填充，无渐变/纹理/阴影；道具=稀疏抖动细线
-- **色彩**：黑+白+唯一橙红点缀
+默认采用用户选定的简化手绘风：略抖黑色轮廓、灰白色块、少量毛发笔触、白底留白。每个动作都保持折耳、奶白眉胡、棕眼和带小黄铜扣的绿色项圈一致。
 
 ## 安装
 
-```bash
-# 一行安装
-npx skills add chenguang-jiang/jcg-documentation-pet
+GitHub 仓库仍为 `chenguang-jiang/jcg-documentation-pet`，技能名已改为 **`dawn-pet`**。
 
-# 或手动
+```bash
+npx skills add chenguang-jiang/jcg-documentation-pet --skill dawn-pet
+```
+
+从本地克隆安装到 Codex：
+
+```bash
 git clone https://github.com/chenguang-jiang/jcg-documentation-pet.git
-ln -s "$PWD/jcg-documentation-pet/skills/jcg-documentation-pet" ~/.codex/skills/
+mkdir -p ~/.codex/skills
+ln -s "$PWD/jcg-documentation-pet/skills/dawn-pet" ~/.codex/skills/dawn-pet
 ```
 
-自检：
-
-```bash
-python3 ~/.codex/skills/jcg-documentation-pet/tests/test_skill_contract.py
-```
+从旧版迁移时，安装后移除旧的 `jcg-documentation-pet` 安装入口，避免同时发现两个版本。新技能在下一轮对话可用。
 
 ## 使用
 
 ```text
-/skill:jcg-documentation-pet
+用 $dawn-pet 生成一张 16:9 白底配图：雪纳瑞认真抱住一个略大的箱子，
+箱子有点歪。保持正式参考图里的角色身份，道具只用稀疏细黑线。
 ```
 
-或在 prompt 里：
+<p align="center">
+  <img src="./assets/readme/carrying-box.png" width="720" alt="Dawn Pet 坐靠后腿，用两只前爪抱住一个倾斜的大箱子，箱子由细黑线画成">
+</p>
 
-```text
-用 jcg-documentation-pet 生成一张 16:9 配图：Dawn Pet 认真推一个
-超大的文件夹，白底，文件夹只用稀疏手绘黑线。
+抱箱子图是场景示例。抬爪图是**唯一正式身份与默认画风锚点**；后续场景采用它更简化的笔触。
+
+## 支持的配图
+
+| 请求 | 输出 |
+|---|---|
+| 头像或主视觉 | 白底单角色，轮廓清晰 |
+| 动作设定图 | 最多三个分离姿势，同一只狗 |
+| 正文场景 | 一个动作、一个主要道具，默认 16:9 |
+| 流程或状态摘要 | 通常 3–5 个动作，细线箭头连接，节点下短标签 |
+| 局部编辑 | 只修改点名部分，保留其余内容 |
+
+技能读取锚点与身份规范，根据输入结构选择资产类型，组织 ImageGen 提示词并检查结果。它使用内置 ImageGen，不安装或训练图像模型。精确数值、字段、代码、复杂流程与并发时序交给 mermaid；狗狗插画可作为主线意境摘要。
+
+## 文件与验证
+
+入口为 [skills/dawn-pet/SKILL.md](./skills/dawn-pet/SKILL.md)。`references/` 包含身份、视觉系统、提示词、流程动作与验收规范；每次生成都要传入随技能附带的 PNG 锚点。
+
+在仓库根目录验证：
+
+```bash
+python3 skills/dawn-pet/tests/test_skill_contract.py
 ```
 
-## 仓库结构
-
-```text
-jcg-documentation-pet/
-├── README.md / README.zh-CN.md
-├── LICENSE · CHANGELOG.md · .gitignore
-├── assets/readme/hero.svg
-├── .github/workflows/test.yml
-└── skills/jcg-documentation-pet/
-    ├── SKILL.md
-    ├── agents/openai.yaml
-    ├── assets/identity/dawn-pet-anchor.png
-    ├── references/
-    │   ├── identity.md
-    │   ├── visual-system.md
-    │   ├── prompt-template.md
-    │   └── qa-checklist.md
-    └── tests/
-        └── test_skill_contract.py   (23 项断言)
-```
-
-## 许可证
-
-[MIT](./LICENSE) © [chenguang-jiang](https://github.com/chenguang-jiang)
+[变更记录](./CHANGELOG.md) · [许可证](./LICENSE)

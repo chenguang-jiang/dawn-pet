@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Contract tests for jcg-documentation-pet skill."""
+"""Contract tests for dawn-pet skill."""
 
 from __future__ import annotations
 
@@ -14,7 +14,7 @@ SKILL_MD = (ROOT / "SKILL.md").read_text(encoding="utf-8")
 class TestSkillContract(unittest.TestCase):
 
     def test_frontmatter_name(self) -> None:
-        self.assertIn("name: jcg-documentation-pet", SKILL_MD)
+        self.assertIn("name: dawn-pet", SKILL_MD)
 
     def test_frontmatter_description(self) -> None:
         self.assertIn("description:", SKILL_MD)
@@ -87,12 +87,12 @@ class TestSkillContract(unittest.TestCase):
 
     def test_yaml_display_name(self) -> None:
         text = (ROOT / "agents" / "openai.yaml").read_text(encoding="utf-8")
-        self.assertIn('display_name: "jcg-documentation-pet"', text)
+        self.assertIn('display_name: "dawn-pet"', text)
         self.assertIn("Dawn Pet", text)  # brand retained in short_description
 
     def test_repo_readme_english(self) -> None:
         text = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
-        self.assertIn("jcg-documentation-pet", text)
+        self.assertIn("dawn-pet", text)
 
     def test_repo_readme_chinese(self) -> None:
         self.assertTrue((REPO_ROOT / "README.zh-CN.md").is_file())
@@ -106,10 +106,10 @@ class TestSkillContract(unittest.TestCase):
     def test_repo_ci_workflow(self) -> None:
         self.assertTrue((REPO_ROOT / ".github" / "workflows" / "test.yml").is_file())
 
-    def test_repo_hero_svg(self) -> None:
-        hero = REPO_ROOT / "assets" / "readme" / "hero.svg"
-        self.assertTrue(hero.is_file())
-        self.assertIn("<svg", hero.read_text(encoding="utf-8"))
+    def test_repo_scene_example(self) -> None:
+        scene = REPO_ROOT / "assets" / "readme" / "carrying-box.png"
+        self.assertTrue(scene.is_file())
+        self.assertTrue(scene.read_bytes().startswith(b"\x89PNG\r\n\x1a\n"))
 
 
 if __name__ == "__main__":

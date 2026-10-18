@@ -17,4 +17,4 @@ jobs:
           python-version: "3.11"
 
       - name: Contract tests (SKILL.md / references / anchor / repo assets)
-        run: python3 skills/jcg-documentation-pet/tests/test_skill_contract.py
+        run: python3 skills/dawn-pet/tests/test_skill_contract.py
