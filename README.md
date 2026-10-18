@@ -42,6 +42,10 @@ sparse black outlines and preserve the reference dog's identity.
 
 The box illustration is a scene example. The paw-raising image is the **sole identity and default style anchor**; future scenes use its simpler rendering.
 
+## Image count
+
+By default, generate **three separate images**, then add illustrations for independent key processes. Major milestones, important events and emphasized points can receive extra images when they add explanatory value. Announce the total and purpose of each image before generation, merging duplicate topics. An explicitly requested total takes priority; a partial edit or an explicitly requested single sheet remains scoped to that request.
+
 ## What the skill does
 
 | Request | Output |

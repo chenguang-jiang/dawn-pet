@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Updated
+- Default to three independent images, with additional coverage for key processes and optional illustrations for meaningful milestones, events and emphasized points; explicit counts and edit targets take priority.
+
 ### Fixed
 - Separate character identity from pose, camera and scene composition; plan actions from content instead of defaulting documentation and query topics to a seated dog reading a book.
 - Specify independent image counts, separate generation calls and scene-diversity checks for multi-image requests.
