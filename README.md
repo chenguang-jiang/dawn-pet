@@ -12,18 +12,18 @@ The default style uses simplified ink contours, gray and cream color blocks, spa
 
 ## Install
 
-The GitHub repository remains `chenguang-jiang/jcg-documentation-pet`; the skill is now **`dawn-pet`**.
+The GitHub repository and skill are both named **`dawn-pet`**.
 
 ```bash
-npx skills add chenguang-jiang/jcg-documentation-pet --skill dawn-pet
+npx skills add chenguang-jiang/dawn-pet --skill dawn-pet
 ```
 
 For a local Codex install from a clone:
 
 ```bash
-git clone https://github.com/chenguang-jiang/jcg-documentation-pet.git
+git clone https://github.com/chenguang-jiang/dawn-pet.git
 mkdir -p ~/.codex/skills
-ln -s "$PWD/jcg-documentation-pet/skills/dawn-pet" ~/.codex/skills/dawn-pet
+ln -s "$PWD/dawn-pet/skills/dawn-pet" ~/.codex/skills/dawn-pet
 ```
 
 If migrating from `jcg-documentation-pet`, remove that old installation entry after installing `dawn-pet` so both versions are not discovered. The updated skill will be available on the next turn.

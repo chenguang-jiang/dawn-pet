@@ -12,18 +12,18 @@
 
 ## 安装
 
-GitHub 仓库仍为 `chenguang-jiang/jcg-documentation-pet`，技能名已改为 **`dawn-pet`**。
+GitHub 仓库与技能名称均为 **`dawn-pet`**。
 
 ```bash
-npx skills add chenguang-jiang/jcg-documentation-pet --skill dawn-pet
+npx skills add chenguang-jiang/dawn-pet --skill dawn-pet
 ```
 
 从本地克隆安装到 Codex：
 
 ```bash
-git clone https://github.com/chenguang-jiang/jcg-documentation-pet.git
+git clone https://github.com/chenguang-jiang/dawn-pet.git
 mkdir -p ~/.codex/skills
-ln -s "$PWD/jcg-documentation-pet/skills/dawn-pet" ~/.codex/skills/dawn-pet
+ln -s "$PWD/dawn-pet/skills/dawn-pet" ~/.codex/skills/dawn-pet
 ```
 
 从旧版迁移时，安装后移除旧的 `jcg-documentation-pet` 安装入口，避免同时发现两个版本。新技能在下一轮对话可用。

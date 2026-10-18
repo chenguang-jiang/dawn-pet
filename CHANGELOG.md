@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Changed
-- Renamed the skill and installation directory to `dawn-pet`; the GitHub repository URL is unchanged.
+- Renamed the skill, installation directory and GitHub repository to `dawn-pet`; updated repository description and installation URLs.
 - Replaced the black mascot with the DawnVibe homepage schnauzer, using the selected simplified paw-raising illustration as the sole identity and style anchor.
 - Updated identity, visual system, prompts, canine flow actions, QA, UI metadata, bilingual READMEs and CI paths.
 - Replaced the retired mascot banner with the new anchor and a generated box-carrying scene example.
